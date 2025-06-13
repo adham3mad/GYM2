@@ -1,0 +1,868 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #252727;
+    --secondary-color: #ea3241;
+    --third-color: #191d1c;
+}
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.home-image {
+    background-image: url(../images/home.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    margin-top: -20px;
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+header h1 span {
+    color: var(--secondary-color);
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .links .icon span {
+    background-color: white;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+header .links .icon span:first-child {
+    width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: .6s;
+}
+
+header .links .icon span:last-child {
+    width: 100%;
+}
+
+header .links ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    display: none;
+    transition: .6s;
+    backdrop-filter: blur(50px);
+    top: calc(100% + 20px);
+}
+
+header .links ul::before {
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent white transparent;
+    top: -20px;
+    right: 5px;
+}
+header .links:hover ul {
+    display: block;
+}
+header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    transition: .3s;
+    color: white;
+    text-align: center;
+}
+
+header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid var(--secondary-color);
+}.home-image {
+    background-image: url(../images/home.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    margin-top: -20px;
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+header h1 span {
+    color: var(--secondary-color);
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .links .icon span {
+    background-color: white;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+header .links .icon span:first-child {
+    width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: .6s;
+}
+
+header .links .icon span:last-child {
+    width: 100%;
+}
+
+header .links ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    display: none;
+    transition: .6s;
+    backdrop-filter: blur(50px);
+    top: calc(100% + 20px);
+}
+
+header .links ul::before {
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent white transparent;
+    top: -20px;
+    right: 5px;
+}
+header .links:hover ul {
+    display: block;
+}
+header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    transition: .3s;
+    color: white;
+    text-align: center;
+}
+
+header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+#home .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .container .h3 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-top: 60px;
+    pointer-events: none;
+
+}
+
+
+
+#home .container h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 120px;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+#home .container h1 span {
+    font-weight: 400;
+}
+
+
+#home .container p {
+    color: white;
+    font-size: 20px;
+}
+
+#home .container a {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .6s;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#home .container a:hover {
+    letter-spacing: 2px;
+}
+
+#process {
+    background-color: var(--main-color);
+    margin-top: -28px;
+}
+
+#process h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 40px 0 10px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#process .top-part .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#process .top-part .container .col {
+    text-align: center;
+    border: 2px solid #606c6e;
+    border-radius: 10px;
+    padding: 20px;
+    height: 250px;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    align-content: center;
+}
+
+#process .top-part .container .col i {
+    text-align: center;
+    color: white;
+    background-color: var(--secondary-color);
+    font-size: 60px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#process .top-part .container .col p {
+    color: white;
+    text-align: center;
+    margin: 20px 0 10px;
+    font-size: 20px;
+    text-wrap: nowrap;
+}
+
+#process .foot {
+    background-color: var(--third-color);
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#process .foot .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+#process .foot .container .col-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#process .foot .container .col-foot:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+#process .foot .container .col-foot i {
+    color: white;
+    font-size: 60px;
+}
+
+#process .foot .container .col-foot span:first-of-type {
+    color: white;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+#process .foot .container .col-foot span:last-of-type {
+    color: var(--secondary-color);
+    font-size: 15px;
+}
+
+.trainers .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 100px;
+}
+
+.trainers .container .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainers .container .column .image {
+    height: 300px;
+    width: 100%;
+}
+
+.trainers .container .column .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.trainers .container .column h3 {
+    color: white;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .6s;
+}
+
+.trainers .container .column h3:hover {
+    letter-spacing: 2px;
+}
+
+.trainers .container .column ul {
+    padding: 15px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainers .container .column ul li {
+    margin-right: 20px;
+    transition: .6s;
+}
+
+.trainers .container .column ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.trainers .container .column ul li:hover {
+    transform: translateY(-5px);
+}
+
+.trainers .container .column hr {
+    width: 30%;
+    background-color: #8c9ca4;
+    margin: 10px 0;
+}
+
+.facts {
+    background-color: var(--secondary-color);
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    align-content: center;
+}
+
+.facts h1 {
+    color: white;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.facts p {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+.facts .container ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.facts .container ul .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facts .container ul .text span:first-child {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+.facts .container ul .text span:last-child {
+    color: white;
+    padding: 5px 0 20px;
+}
+
+#plans {
+    background-color: var(--main-color);
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    align-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#plans h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+#plans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 60px 0;
+    gap: 20px;
+}
+
+#plans .container .col {
+    padding: 20px;
+    border-radius: 10px;
+    height: 600px;
+}
+
+#plans .container .col:nth-child(2) {
+    background-color: var(--secondary-color);
+
+}
+
+#plans .container .col:not(:nth-child(2)) {
+    background-color: #191d1c;
+}
+#plans .container .col h2 {
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+#plans .container .col:nth-child(2) h2 {
+    color: white;   
+}
+
+#plans .container .col .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#plans .container .col .price span:first-of-type {
+    color: white;
+    font-size: 70px;
+    position: relative;
+}
+
+#plans .container .col .price span:first-of-type::before {
+    content: '$';
+    position: absolute;
+    left: -25px;
+    font-size: 40px;
+    top: 5px;
+}
+
+#plans .container .col .price span:last-of-type {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+#plans .container .col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+#plans .container .col ul li i {
+    color: var(--main-color);
+}
+
+#plans .container .col ul li {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+#plans .container .col:not(:nth-child(2)) ul li i {
+    color: #eee;
+}
+
+#plans .container .col ul li::before {
+    content: '';
+    position: absolute;
+    width: 250%;
+    height: 2px;
+    background-color: #eee;
+    bottom: -10px;
+    left: -75%;
+}
+
+#plans .container .col a {
+    display: block;
+    text-decoration: none;
+    background-color: #050d10;
+    width: 60%;
+    color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    transition: .6s;
+}
+
+#plans .container .col a:hover {
+    letter-spacing: 2px;
+}
+
+#plans .container .col:nth-child(2) a {
+    color: black;
+    background-color: white;
+}
+
+.comfort-zone {
+    position: relative;
+    background-image: url('../images/comfort-zone.jpg');
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.comfort-zone .sentence {
+    position: absolute;
+    width: 40%;
+    margin-right: 10px;
+    line-height: 1.4;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.comfort-zone .sentence p {
+    position: absolute;
+    font-size: 55px;
+    color: white;
+    font-weight: 800;
+    top: 20px;
+    z-index: 2;
+}
+
+.comfort-zone .sentence p span {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 1200px) {
+    .comfort-zone {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #comfort {
+        font-size: 45px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 768px) {
+    #comfort {
+        font-size: 40px;
+    }
+}
+
+#contact {
+    background-color: var(--main-color);
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    align-content: center;
+}
+
+#contact h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0 120px;
+}
+
+#contact .container {
+    display: grid;
+    grid-template-columns: 75% 20%;
+    margin-left: 200px;
+    width: 80%;
+    height: 90%;
+    margin-bottom: 50px;
+}
+
+#contact .container .big-col .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact .container .big-col .form input {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--third-color);
+    caret-color: white;
+    color: white;
+}
+
+#contact .container .big-col .form input::placeholder {
+    align-items: flex-start;
+}
+
+#contact .container .big-col .form input::selection,
+#contact .container .big-col .form textarea::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#contact .container .big-col .form textarea {
+    width: 80%;
+    border-radius: 10px;
+    height: 140px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--third-color);
+    margin-bottom: 10px;
+    caret-color: white;
+    color: white;
+}
+
+#contact .container .big-col .form input:last-of-type {
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: .6s;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#contact .container .big-col .form input:last-of-type:hover {
+    letter-spacing: 2px;
+}
+
+#contact .container .small-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .container .small-col .item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+#contact .container .small-col .item span {
+    color: var(--secondary-color);
+    font-size: 35px;
+    margin-bottom: 10px;
+    transition: .6s;
+}
+#contact .container .small-col .item span:hover {
+    transform: translateY(-5px);
+}
+
+#contact .container .small-col .item p {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#contact .container .small-col .item p:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+
+#contact .container .small-col .item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.footer {
+    position: relative;
+    background-color: var(--main-color);
+    align-content: center;
+    width: 100%;
+    height: 500px;
+}
+.footer .map {
+    position: absolute;
+    background-image: url('../images/newyork.png');
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 470px;
+}
+
+
+.footer .footer-text {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-color);
+    z-index: 2;
+    bottom: 0;
+}
+.footer .footer-text p {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(159, 153, 153);
+}
+
+@media screen and (max-width: 656px) {
+    #foot-col:nth-child(3)::before,
+    #foot-col:last-child::before {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 657px) and (max-width: 991px){
+    #foot-col:nth-child(4)::before {
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #foot-col:last-child::before {
+        display: none;
+    }
+}
